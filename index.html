@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <title>LeadGen</title>
     <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js"></script>
 </head>
 <body>
 
@@ -19,22 +20,39 @@
     </div>
 
     <div class="container">
-        <div class="info">        <p>Are you ready to join the next generation of leaders? Take this quiz to see where you stand.</p>
+        <div class="info">        
+            <p>Are you ready to join the next generation of leaders? Take this quiz to see where you stand.</p>
         </div>
 
-        <form action="#" method="post">
+        <form action="#" method="post"></form>
 
             <div class="form-section">
-                <p class="question">1. What does it mean to lead others, and how do you balance your vision with the needs of those you lead?</p>
+                <p class="question">1. What does it mean to lead others, and how do you balance your vision with the needs of those you lead?
+                    <button type="button" class="mic-btn" onclick="speakText(this)">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
 
-                <p class="question">2. How do you prefer to handle challenges?</p>
+                <p class="question">2. How do you prefer to handle challenges?
+                    <button type="button" class="mic-btn" onclick="speakText(this)">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
         
-                <p class="question">3. What is more important: achieving a goal or the way in which the goal is achieved? Explain.</p>
+                <p class="question">3. What is more important: achieving a goal or the way in which the goal is achieved? Explain.
+                    <button type="button" class="mic-btn" onclick="speakText(this)">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
 
-                <p class="question">4. Can you share an example of a time when you experienced failure, and how did that experience shape your approach to leadership or decision-making moving forward?</p>
+                <p class="question">4. Can you share an example of a time when you experienced failure, and how did that experience shape your approach to leadership or decision-making moving forward?
+                    <button type="button" class="mic-btn" onclick="speakText(this)">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
                 
                 <div class="buttons">
@@ -43,6 +61,8 @@
                 </div>
             </div>
         </form>
+                    
+                
     </div>
 
 </body>
