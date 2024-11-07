@@ -20,4 +20,15 @@ function saveAnswers() {
     localStorage.setItem('question2', answers.question2);
     localStorage.setItem('question3', answers.question3);
     localStorage.setItem('question4', answers.question4);
+
+    const answer1 = localStorage.getItem('question1')
+    const answer2 = localStorage.getItem('question2')
+    const answer3 = localStorage.getItem('question3')
+    const answer4 = localStorage.getItem('question4')
+
+    console.log("Answer 1:", answer1);
+    console.log("Answer 2:", answer2);
+    console.log("Answer 3:", answer3);
+    console.log("Answer 4:", answer4);
 }
+
