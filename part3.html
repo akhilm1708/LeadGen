@@ -26,11 +26,19 @@
 
         <form action="#" method="post">
             <div class="form-section">
-                <p class="question">3. What is more important: achieving a goal or the way in which the goal is achieved? Explain.</p>
+                <p class="question">3. What is more important: achieving a goal or the way in which the goal is achieved? Explain.
+
+                    <button type="button" class="mic-btn" onclick="speakText(this)"></button>
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" id="question3-answer" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
 
                 <div class="buttons">
                     <button type="button" class="submit-btn" onclick="saveAndNext('question3')">Save</button>
+                    <button type="button" class="mic-btn" onclick="startSpeechRecognition('question1')">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
                 </div>
             </div>
         </form>

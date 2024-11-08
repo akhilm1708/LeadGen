@@ -34,9 +34,9 @@
     </div>
 
     <script>
-        window.onload = function() {
+    window.onload = function() {
             const answers = {
-                question1: localStorage.getItem('question1'),
+            question1: localStorage.getItem('question1'),
                 question2: localStorage.getItem('question2'),
                 question3: localStorage.getItem('question3'),
                 question4: localStorage.getItem('question4')
@@ -45,14 +45,14 @@
             document.getElementById('answers').textContent = JSON.stringify(answers, null, 2);
         };
 
-        function downloadCSV() {
+     function downloadCSV() {
             const answers = {
                 question1: localStorage.getItem('question1'),
                 question2: localStorage.getItem('question2'),
                 question3: localStorage.getItem('question3'),
                 question4: localStorage.getItem('question4')
             };
-        let csvContent = "Question,Answer\n";
+     let csvContent = "Question,Answer\n";
             for (const [question, answer] of Object.entries(answers)) {
                 csvContent += `${question},${answer}\n`;
             }

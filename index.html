@@ -26,11 +26,17 @@
 
     <form action="#" method="post">
             <div class="form-section">
-                <p class="question">1. What does it mean to lead others, and how do you balance your vision with the needs of those you lead?</p>
+                <p class="question">
+                    1. What does it mean to lead others, and how do you balance your vision with the needs of those you lead?
+                    <button type="button" class="mic-btn" onclick="speakText(this)">
+                        <img src="mic.png" alt="Mic Icon">
+                    </button>
+                </p>
                 <textarea class="text-input" id="question1-answer" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
 
                 <div class="buttons">
                 <button type="button" class="submit-btn" onclick="saveAndNext('question1')">Save</button>
+                
             </div>
             </div>
         </form>
