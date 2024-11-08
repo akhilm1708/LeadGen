@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Thank You for Taking the Quiz!</h1>
+    </div>
+
+    <div class="container">
+        <div class="info">
+            <p>Your answers have been saved. You can review them below:</p>
+            <pre id="answers"></pre>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const answers = {
+                question1: localStorage.getItem('question1'),
+                question2: localStorage.getItem('question2'),
+                question3: localStorage.getItem('question3'),
+                question4: localStorage.getItem('question4')
+            };
+
+            document.getElementById('answers').textContent = JSON.stringify(answers, null, 2);
+        };
+    </script>
+
+</body>
+</html>

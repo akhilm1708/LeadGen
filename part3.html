@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadGen - Question 1</title>
+    <title>LeadGen - Question 3</title>
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
@@ -19,11 +19,11 @@
 
         <form action="#" method="post">
             <div class="form-section">
-                <p class="question">1. What does it mean to lead others, and how do you balance your vision with the needs of those you lead?</p>
-                <textarea class="text-input" id="question1-answer" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
+                <p class="question">3. What is more important: achieving a goal or the way in which the goal is achieved? Explain.</p>
+                <textarea class="text-input" id="question3-answer" name="leader-quality" rows="4" placeholder="Your answer here..."></textarea>
 
                 <div class="buttons">
-                    <button type="button" class="submit-btn" onclick="saveAndNext('question1')">Save</button>
+                    <button type="button" class="submit-btn" onclick="saveAndNext('question3')">Save</button>
                 </div>
             </div>
         </form>
@@ -33,7 +33,7 @@
         function saveAndNext(questionKey) {
             const answer = document.getElementById(questionKey + '-answer').value;
             localStorage.setItem(questionKey, answer);
-            window.location.href = 'part2.html'; // navigate to the next question
+            window.location.href = 'part4.html'; // navigate to the next question
         }
     </script>
 
