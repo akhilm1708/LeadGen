@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
-    <link rel="stylesheet" href="quiz.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+        <title>LeadGen</title>
+        <link rel="stylesheet" href="quiz.css">
+        <script src="quiz.js"></script>
+    </head>
 </head>
 <body>
 
@@ -16,6 +25,11 @@
         <div class="info">
             <p>Your answers have been saved. You can review them below:</p>
             <pre id="answers"></pre>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="submit-btn" onclick="downloadCSV()">Download Answers</button>
+            <button type="button" class="submit-btn" onclick="resetQuiz()">Reset Quiz</button>
         </div>
     </div>
 
@@ -30,6 +44,34 @@
 
             document.getElementById('answers').textContent = JSON.stringify(answers, null, 2);
         };
+
+        function downloadCSV() {
+            const answers = {
+                question1: localStorage.getItem('question1'),
+                question2: localStorage.getItem('question2'),
+                question3: localStorage.getItem('question3'),
+                question4: localStorage.getItem('question4')
+            };
+        let csvContent = "Question,Answer\n";
+            for (const [question, answer] of Object.entries(answers)) {
+                csvContent += `${question},${answer}\n`;
+            }
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'quiz_answers.csv';
+            link.click();
+        }
+
+        // reset the quiz
+        function resetQuiz() {
+            // clear localStorage
+            localStorage.clear();
+
+            // Redirect back to the first question  
+            window.location.href = 'index.html';
+        }
     </script>
 
 </body>
